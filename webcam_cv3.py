@@ -1,13 +1,10 @@
-from ursina import *
-from ursina.prefabs.first_person_controller import FirstPersonController
-from ursina.shaders import lit_with_shadows_shader
+
 import random
 import os
 import cv2
 import logging as log
 import datetime as dt
 from time import sleep
-import win32api, win32con
 from threading import Thread
 
 Scan_X_Max = 635
@@ -19,11 +16,7 @@ Screen_Y_Max = 765
 cascPath = "xml/LOL.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 log.basicConfig(filename='webcam.log',level=log.INFO)
-win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0,0)
 
-
-def move_mouse(x,y):
-    win32api.SetCursorPos((x,y))
 
 video_capture = cv2.VideoCapture(0)
 anterior = 0
