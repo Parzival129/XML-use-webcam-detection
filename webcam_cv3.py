@@ -7,11 +7,6 @@ import datetime as dt
 from time import sleep
 from threading import Thread
 
-Scan_X_Max = 635
-Scan_Y_Max = 510
-
-Screen_X_Max = 1365
-Screen_Y_Max = 765
 
 cascPath = "xml/LOL.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
@@ -47,7 +42,6 @@ while True:
 
         print (str(Xa) + " " + str(Ya))
 
-        move_mouse(x, y)
         print (x, y, w, h)
 
     if anterior != len(faces):
